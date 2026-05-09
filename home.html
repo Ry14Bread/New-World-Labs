@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>New World Labs Employee Access-A2</title>
+  <title>New World Labs // Project Hub</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -10,13 +10,12 @@
 
   <!-- TOP BAR -->
   <header class="topbar">
-    <h2>NEW WORLD LABS Employee Access-A2</h2>
+    <h2>NEW WORLD LABS // PROJECT HUB</h2>
 
-    <!-- SEARCH BAR -->
     <input 
       type="text" 
       id="searchBar" 
-      placeholder="Search folders, systems, archives..." 
+      placeholder="Search projects, systems, archives..." 
       onkeyup="searchFolders()"
     >
   </header>
@@ -24,37 +23,37 @@
   <main class="container">
 
     <h3 style="text-align:center; color:#4aa3ff; margin-top:20px;">
-      RESEARCH ARCHIVE DIRECTORY
+      ACTIVE PROJECT DIRECTORY
     </h3>
 
     <p style="text-align:center; color:#aaa;">
-      Select or search a research folder
+      Select a project system to access its archive
     </p>
 
-    <!-- FOLDERS (NOW CLICKABLE + FRAMED) -->
+    <!-- PROJECT GRID -->
     <div class="file-grid" id="fileGrid">
 
-      <!-- PROJECT SAWBOO -->
+      <!-- SAWBOO -->
       <a href="sawboo.html" class="folder-link">
-        <div class="file-card" data-name="project sawboo main research">
+        <div class="file-card" data-name="project sawboo">
           <h3>PROJECT SAWBOO</h3>
           <p>Study and Analysis of Worlds Beyond Our Own.</p>
         </div>
       </a>
 
-      <!-- EMPLOYEE FILES -->
-      <a href="employee.html" class="folder-link">
-        <div class="file-card locked" data-name="employee files restricted locked">
-          <h3>EMPLOYEE FILES 🔒</h3>
-          <p>Restricted access. Clearance required.</p>
+      <!-- RADAR -->
+      <a href="radar.html" class="folder-link">
+        <div class="file-card" data-name="radar anomalous reports">
+          <h3>R.A.D.A.R.</h3>
+          <p>Research, Analysis, and Documentation of Anomalous Reports.</p>
         </div>
       </a>
 
-      <!-- RADAR -->
-      <a href="radar.html" class="folder-link">
-        <div class="file-card" data-name="radar research analysis anomalous reports">
-          <h3>R.A.D.A.R.</h3>
-          <p>Research, Analysis, and Documentation of Anomalous Reports.</p>
+      <!-- EMPLOYEE FILES -->
+      <a href="employee.html" class="folder-link">
+        <div class="file-card locked" data-name="employee files locked">
+          <h3>EMPLOYEE FILES 🔒</h3>
+          <p>Restricted access. Clearance required.</p>
         </div>
       </a>
 
@@ -62,7 +61,7 @@
 
   </main>
 
-  <!-- SEARCH SCRIPT (UNCHANGED BUT WORKS WITH NEW LINKS) -->
+  <!-- SEARCH SCRIPT -->
   <script>
     function searchFolders() {
       const input = document.getElementById("searchBar").value.toLowerCase();
