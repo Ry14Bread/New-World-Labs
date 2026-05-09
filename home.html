@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Project SAWBOO // Archive System</title>
+  <title>New World Labs // Project SAWBOO</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -10,71 +10,43 @@
 
   <!-- TOP BAR -->
   <header class="topbar">
-    <h2>PROJECT SAWBOO // STUDY AND ANALYSIS OF WORLDS BEYOND OUR OWN</h2>
-    <input type="text" id="searchBar" placeholder="Search anomalies, projects, signals..." onkeyup="searchFiles()">
+    <h2>NEW WORLD LABS // PROJECT SAWBOO</h2>
   </header>
 
   <main class="container">
 
-    <h3 style="text-align:center; color:#4aa3ff; margin-top:15px;">
-      ACTIVE RESEARCH ARCHIVE
+    <h3 style="text-align:center; color:#4aa3ff; margin-top:20px;">
+      RESEARCH ARCHIVE DIRECTORY
     </h3>
 
-    <!-- FILE GRID -->
-    <div class="file-grid" id="fileGrid">
+    <p style="text-align:center; color:#aaa;">
+      Select a research folder to access classified materials
+    </p>
 
-      <div class="file-card" data-name="vivid ring anomaly">
-        <h3>VIVID RING ANOMALY</h3>
-        <p>Unstable dimensional resonance pattern detected in orbital field.</p>
+    <!-- FOLDERS -->
+    <div class="file-grid">
+
+      <!-- SAWBOO MAIN -->
+      <div class="file-card">
+        <h3>PROJECT SAWBOO</h3>
+        <p>Primary research initiative: Study and Analysis of Worlds Beyond Our Own.</p>
       </div>
 
-      <div class="file-card" data-name="project atlas">
-        <h3>PROJECT ATLAS</h3>
-        <p>Orbital mapping inconsistencies across surveyed planetary grid.</p>
+      <!-- LOCKED EMPLOYEE FILES -->
+      <div class="file-card locked">
+        <h3>EMPLOYEE FILES 🔒</h3>
+        <p>Restricted access. Clearance level required.</p>
       </div>
 
-      <div class="file-card" data-name="entity records unknown life">
-        <h3>ENTITY RECORDS</h3>
-        <p>Non-terrestrial biological signatures detected in restricted zones.</p>
-      </div>
-
-      <div class="file-card" data-name="solar grid expansion energy">
-        <h3>SOLAR GRID EXPANSION</h3>
-        <p>Planetary-scale energy harvesting infrastructure under development.</p>
-      </div>
-
-      <div class="file-card" data-name="containment logs breach">
-        <h3>CONTAINMENT LOGS</h3>
-        <p>Multiple containment failures recorded across sealed research sectors.</p>
-      </div>
-
-      <div class="file-card" data-name="unknown signal transmission">
-        <h3>UNKNOWN SIGNAL</h3>
-        <p>Deep space transmission detected. Pattern suggests structured communication.</p>
+      <!-- RADAR -->
+      <div class="file-card">
+        <h3>R.A.D.A.R.</h3>
+        <p>Research, Analysis, and Documentation of Anomalous Reports.</p>
       </div>
 
     </div>
 
   </main>
-
-  <!-- SEARCH SCRIPT -->
-  <script>
-    function searchFiles() {
-      const input = document.getElementById("searchBar").value.toLowerCase();
-      const files = document.querySelectorAll(".file-card");
-
-      files.forEach(file => {
-        const name = file.getAttribute("data-name").toLowerCase();
-        const text = file.innerText.toLowerCase();
-
-        if (name.includes(input) || text.includes(input)) {
-          file.style.display = "block";
-        } else {
-          file.style.display = "none";
-        }
-      });
-    }
-  </script>
 
 </body>
 </html>
