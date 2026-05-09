@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>S.A.W.B.O.O // RECOVERED ARCHIVE</title>
 
   <link rel="stylesheet" href="style.css">
@@ -37,7 +39,7 @@
       padding:40px 20px;
     }
 
-    .warning{
+    .warning-box{
       text-align:center;
       border:1px solid #4aa3ff33;
       background:#08111b;
@@ -46,13 +48,13 @@
       box-shadow:0 0 20px rgba(0,0,0,.6);
     }
 
-    .warning h3{
+    .warning-box h3{
       color:#4aa3ff;
       margin-top:0;
       letter-spacing:2px;
     }
 
-    .warning p{
+    .warning-box p{
       color:#9aa7b5;
       line-height:1.6;
     }
@@ -110,9 +112,57 @@
       animation:glitch 1s infinite;
     }
 
+    .corrupted{
+      background:#050608;
+      border:1px solid #421414;
+      padding:20px;
+      margin-top:20px;
+      box-shadow:0 0 20px rgba(0,0,0,.7);
+    }
+
+    .static{
+      color:#777;
+      letter-spacing:2px;
+      animation:staticflicker .1s infinite;
+    }
+
+    .glitch-heavy{
+      color:#ff5a5a;
+      text-shadow:
+        -2px 0 red,
+        2px 0 cyan;
+      animation:heavyglitch .08s infinite;
+    }
+
+    .corrupt{
+      color:#ff2b2b;
+      font-weight:bold;
+      animation:distort .15s infinite;
+    }
+
     @keyframes glitch{
       0%{opacity:1;}
       50%{opacity:.6;}
+      100%{opacity:1;}
+    }
+
+    @keyframes staticflicker{
+      0%{opacity:1;}
+      50%{opacity:.5;}
+      100%{opacity:1;}
+    }
+
+    @keyframes heavyglitch{
+      0%{transform:translate(0);}
+      25%{transform:translate(-2px,1px);}
+      50%{transform:translate(2px,-1px);}
+      75%{transform:translate(-1px,0);}
+      100%{transform:translate(0);}
+    }
+
+    @keyframes distort{
+      0%{opacity:1;}
+      50%{opacity:.4;}
       100%{opacity:1;}
     }
 
@@ -135,7 +185,7 @@
 
 <main class="container">
 
-  <div class="warning">
+  <div class="warning-box">
 
     <h3>WARNING // INFORMATION REDACTED</h3>
 
@@ -170,8 +220,7 @@
       <b>Creatus-Somniportascire Foreman Lobe.</b>
       <br><br>
       The strange part is the tissue doesn't resemble normal brain matter anymore.
-      It almost looks...
-      grown.
+      It almost looks grown.
     </p>
 
   </div>
@@ -219,8 +268,7 @@
       We expected dreams.
       We expected hallucinations.
       <br><br>
-      What we did not expect...
-      was the voice.
+      What we did not expect was the voice.
       <br><br>
       Audio equipment throughout the chamber recorded whispering despite the room being sealed.
       Multiple staff reported hearing their names spoken from empty hallways.
@@ -242,12 +290,11 @@
       Funding has been revoked following the Sublevel C blackout.
       External oversight teams arrived this morning.
       <br><br>
-      J.B. remains alive despite catastrophic neural expansion.
-      The walls inside the chamber are covered in markings we cannot identify.
+      J.B. died years ago, but the markings inside Chamber B continue appearing overnight.
       <br><br>
       Nobody admits to writing them.
       <br><br>
-      The symbols continue appearing overnight.
+      Several symbols match descriptions recorded in J.B.'s hospital files.
     </p>
 
   </div>
@@ -262,21 +309,109 @@
       PARTIAL RECOVERY ONLY
     </div>
 
-    <p>
-      I reviewed the hallway footage again.
-      J.B. never leaves the containment room.
-      <br><br>
-      So explain why security cameras caught him walking through Sublevel C at 01:03.
-      <br><br>
-      The chamber door never opened.
-      <br><br>
-      At 01:04 he was back inside the room,
-      standing motionless in the corner.
-      <br><br>
-      Looking directly into the camera.
-      <br><br>
-      Smiling.
-    </p>
+    <div class="corrupted">
+
+      <h2>▚ FILE STATUS: PARTIALLY RECOVERED ▞</h2>
+
+      <p class="danger">
+        WARNING: FILE DAMAGE DETECTED.<br>
+        MULTIPLE DATA SECTORS UNREADABLE.<br>
+        RECOVERY ATTEMPT SUCCESS RATE: 43%
+      </p>
+
+      <hr>
+
+      <p>
+        S.A.W.B.O.O. Internal Record // Archive Fragment<br>
+        Reference ID: ██-JB-███<br>
+        Recovered From: St. █████ Medical Server Backup
+      </p>
+
+      <p class="static">
+        -----BEGIN RECOVERED HOSPITAL RECORD-----
+      </p>
+
+      <p>
+        Patient Name: J. B.<br>
+        Age: 17<br>
+        Status: DECEASED<br>
+        Date of Death: October ██, 19██<br>
+        Cause of Death: Severe neurological failure following unexplained coma.
+      </p>
+
+      <p class="glitch">
+        Attending Physician Notes:<br>
+        Patient repeatedly described "a ring of living color beneath the world."<br>
+        Speech deteriorated over six days.<br>
+        Patient became unresponsive at 03:14 AM.<br>
+        Cardiac arrest followed shortly after.
+      </p>
+
+      <p>
+        Additional Notes:<br>
+        Body transferred to ████████ County Morgue.
+      </p>
+
+      <p class="redacted">
+        Transfer confirmation unavailable.<br>
+        Remains were never officially accounted for.
+      </p>
+
+      <p class="static">
+        -----END RECOVERED HOSPITAL RECORD-----
+      </p>
+
+      <hr>
+
+      <p>
+        S.A.W.B.O.O. Personnel Incident Report<br>
+        Recovered Fragment // Classification Level 4
+      </p>
+
+      <p>
+        Lead Biology Specialist: Dr. Elias Vey<br>
+        Department: Biological Containment & Organic Study
+      </p>
+
+      <p class="glitch">
+        Incident Summary:<br>
+        Dr. Vey entered containment chamber B-14 during exposure testing of Object ██.<br>
+        Witnesses reported auditory hallucinations and visual distortion immediately prior to collapse.
+      </p>
+
+      <p>
+        Subject found unconscious.<br>
+        No signs of physical trauma.<br>
+        Persistent coma state followed.
+      </p>
+
+      <p class="redacted">
+        EEG scans displayed abnormal synchronized activity inconsistent with normal human patterns.
+      </p>
+
+      <p class="glitch-heavy">
+        During unconscious episodes, subject repeatedly whispered:<br><br>
+
+        "the ring remembers"<br>
+        "he never left"<br>
+        "J.B. is still below"
+      </p>
+
+      <p>
+        Monitoring continued for 11 months.
+      </p>
+
+      <p class="corrupt">
+        FINAL STATUS: SUBJECT MISSING DURING FACILITY EVACUATION.<br>
+        NO REMAINS RECOVERED.<br>
+        NO EXIT FOOTAGE FOUND.<br><br>
+
+        ███ERROR███ERROR███ERROR███<br>
+        SIGNAL TRACE DETECTED<br>
+        SOURCE: VIVID RING
+      </p>
+
+    </div>
 
   </div>
 
@@ -295,8 +430,8 @@
       Multiple personnel confirmed deceased or missing.
       <br><br>
       Principal Investigator detained pending federal review.
-      Biological Analyst <span class="redacted">████████</span>
-      remains unaccounted for.
+      <br><br>
+      Dr. Elias Vey remains unaccounted for following the Site ██ evacuation.
       <br><br>
       Remaining surveillance footage ends abruptly at 03:11 AM.
       <br><br>
