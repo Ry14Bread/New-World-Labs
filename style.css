@@ -1,10 +1,72 @@
 body {
-    background-color: black;
-    color: white;
-    font-family: monospace;
-    padding: 40px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b0f14;
+  color: #e6e6e6;
 }
 
-h1 {
-    color: cyan;
+/* TOP BAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #111824;
+  border-bottom: 1px solid #2b3a4a;
+}
+
+.topbar h2 {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+/* MAIN DOCUMENT BOX */
+.research-doc {
+  width: 70%;
+  margin: 20px auto;
+  padding: 30px;
+  background: #0f1722;
+  border: 1px solid #2b3a4a;
+  border-radius: 10px;
+  line-height: 1.6;
+}
+
+/* TITLE */
+.research-doc h1 {
+  text-align: center;
+  color: #4aa3ff;
+  margin-bottom: 5px;
+}
+
+/* SECTION HEADERS */
+.research-doc h2 {
+  margin-top: 30px;
+  color: #ffffff;
+  border-left: 3px solid #4aa3ff;
+  padding-left: 10px;
+}
+
+/* CLASSIFICATION TEXT */
+.meta {
+  text-align: center;
+  color: #ffcc00;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+/* DIVIDER LINE */
+.research-doc hr {
+  border: none;
+  border-top: 1px solid #2b3a4a;
+  margin: 20px 0;
+}
+
+/* END NOTE */
+.footer-note {
+  text-align: center;
+  margin-top: 40px;
+  color: #ff3b3b;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
