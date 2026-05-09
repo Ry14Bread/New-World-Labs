@@ -70,3 +70,32 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
 }
+.folder-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.file-card {
+  border: 2px solid #2b3a4a;
+  background: #111824;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.file-card:hover {
+  border-color: #4aa3ff;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(74,163,255,0.3);
+}
+
+.locked {
+  opacity: 0.4;
+  border-color: #ff3b3b;
+}
+
+.locked:hover {
+  box-shadow: 0 0 10px rgba(255,59,59,0.3);
+}
