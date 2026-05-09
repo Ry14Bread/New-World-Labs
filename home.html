@@ -5,6 +5,15 @@
 
   <style>
     body {
+      <div style="padding:20px;">
+  <input 
+    id="searchBar"
+    type="text"
+    placeholder="Search classified archives..."
+    onkeyup="searchFiles()"
+    style="width:100%; padding:10px; font-size:16px; background:#111; color:#00ffcc; border:1px solid #00ffcc;"
+  />
+</div>
       background-color: #0a0a0a;
       color: #00ffcc;
       font-family: monospace;
@@ -38,7 +47,22 @@
     }
   </style>
 </head>
+<script>
+function searchFiles() {
+  let input = document.getElementById("searchBar").value.toLowerCase();
+  let folders = document.getElementsByClassName("folder");
 
+  for (let i = 0; i < folders.length; i++) {
+    let text = folders[i].innerText.toLowerCase();
+
+    if (text.includes(input)) {
+      folders[i].style.display = "block";
+    } else {
+      folders[i].style.display = "none";
+    }
+  }
+}
+</script>
 <body>
 
   <div class="header">
