@@ -1,102 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>New World Labs // Archive Access</title>
-
-  <style>
-    body {
-      background-color: #0a0a0a;
-      color: #00ffcc;
-      font-family: monospace;
-      margin: 0;
-      padding: 0;
-    }
-
-    .header {
-      padding: 20px;
-      border-bottom: 1px solid #00ffcc;
-    }
-
-    .container {
-      padding: 20px;
-    }
-
-    .folder {
-      border: 1px solid #00ffcc;
-      padding: 15px;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
-
-    .folder:hover {
-      background-color: #111;
-    }
-
-    .warning {
-      color: red;
-      font-size: 12px;
-    }
-
-    #searchBar {
-      width: calc(100% - 40px);
-      margin: 20px;
-      padding: 10px;
-      font-size: 16px;
-      background: #111;
-      color: #00ffcc;
-      border: 1px solid #00ffcc;
-      font-family: monospace;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>Project SAWBOO // Archive</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="dark">
 
-  <!-- HEADER -->
-  <div class="header">
-    <h1>NEW WORLD LABS</h1>
-    <p>Central Archive Node // Domus 001</p>
-    <p class="warning">UNAUTHORIZED ACCESS IS LOGGED</p>
-  </div>
+  <header class="topbar">
+    <h2>PROJECT SAWBOO // RESEARCH DOSSIER ACCESS</h2>
+  </header>
 
-  <!-- SEARCH BAR -->
-  <input 
-    id="searchBar"
-    type="text"
-    placeholder="Search classified archives..."
-    onkeyup="searchFiles()"
-  />
+  <main>
 
-  <!-- CONTENT -->
-  <div class="container">
+    <div class="research-doc">
 
-    <h2>Research Index</h2>
+      <h1>PROJECT SAWBOO</h1>
+      <p class="meta">
+        Study and Analysis of Worlds Beyond Our Own<br>
+        CLASSIFICATION: RESTRICTED // MULTI-DIMENSIONAL RESEARCH UNIT
+      </p>
 
-    <div class="folder">Project S.A.W.B.O.O — Core Documentation</div>
-    <div class="folder">Vivid Ring Physics // Domus Structure Analysis</div>
-    <div class="folder">C.P.N Neural Interface Reports</div>
-    <div class="folder">Restricted Personnel Files [REDACTED]</div>
-    <div class="folder">Creatus-Somniportascire Case Studies</div>
+      <hr>
 
-  </div>
+      <h2>OVERVIEW</h2>
+      <p>
+        Project SAWBOO is a research initiative focused on the detection, classification,
+        and analysis of non-origin spatial phenomena. Early findings suggest interaction
+        with systems beyond known physical boundaries.
+      </p>
 
-  <!-- SCRIPT -->
-  <script>
-    function searchFiles() {
-      let input = document.getElementById("searchBar").value.toLowerCase();
-      let folders = document.getElementsByClassName("folder");
+      <h2>SECTION 01 — PROJECT ATLAS</h2>
+      <p>
+        Orbital mapping systems have recorded inconsistencies in planetary positioning data.
+        Some regions appear to “shift” outside expected gravitational modeling.
+      </p>
 
-      for (let i = 0; i < folders.length; i++) {
-        let text = folders[i].innerText.toLowerCase();
+      <h2>SECTION 02 — ENTITY RECORDS</h2>
+      <p>
+        Biological signatures detected in multiple zones do not match known terrestrial lifeforms.
+        Several samples show structural adaptation beyond evolutionary constraints.
+      </p>
 
-        if (text.includes(input)) {
-          folders[i].style.display = "block";
-        } else {
-          folders[i].style.display = "none";
-        }
-      }
-    }
-  </script>
+      <h2>SECTION 03 — SOLAR GRID EXPANSION</h2>
+      <p>
+        Energy harvesting initiatives have escalated toward full planetary capture systems.
+        Current projections indicate feasibility of star-level energy integration.
+      </p>
+
+      <h2>SECTION 04 — CONTAINMENT LOGS</h2>
+      <p>
+        Multiple containment failures recorded across secured research zones.
+        Subject behavior suggests partial awareness of observation protocols.
+      </p>
+
+      <h2>SECTION 05 — UNKNOWN SIGNAL</h2>
+      <p>
+        A repeating transmission has been identified originating outside mapped space.
+        Pattern analysis indicates structured communication attempts.
+      </p>
+
+      <hr>
+
+      <p class="footer-note">
+        END OF DOSSIER — PROJECT SAWBOO ACCESS TERMINATED
+      </p>
+
+    </div>
+
+  </main>
 
 </body>
 </html>
