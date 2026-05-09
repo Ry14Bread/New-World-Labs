@@ -2,74 +2,79 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Project SAWBOO // Archive</title>
+  <title>Project SAWBOO // Archive System</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="dark">
 
+  <!-- TOP BAR -->
   <header class="topbar">
-    <h2>PROJECT SAWBOO // RESEARCH DOSSIER ACCESS</h2>
+    <h2>PROJECT SAWBOO // STUDY AND ANALYSIS OF WORLDS BEYOND OUR OWN</h2>
+    <input type="text" id="searchBar" placeholder="Search anomalies, projects, signals..." onkeyup="searchFiles()">
   </header>
 
-  <main>
+  <main class="container">
 
-    <div class="research-doc">
+    <h3 style="text-align:center; color:#4aa3ff; margin-top:15px;">
+      ACTIVE RESEARCH ARCHIVE
+    </h3>
 
-      <h1>PROJECT SAWBOO</h1>
-      <p class="meta">
-        Study and Analysis of Worlds Beyond Our Own<br>
-        CLASSIFICATION: RESTRICTED // MULTI-DIMENSIONAL RESEARCH UNIT
-      </p>
+    <!-- FILE GRID -->
+    <div class="file-grid" id="fileGrid">
 
-      <hr>
+      <div class="file-card" data-name="vivid ring anomaly">
+        <h3>VIVID RING ANOMALY</h3>
+        <p>Unstable dimensional resonance pattern detected in orbital field.</p>
+      </div>
 
-      <h2>OVERVIEW</h2>
-      <p>
-        Project SAWBOO is a research initiative focused on the detection, classification,
-        and analysis of non-origin spatial phenomena. Early findings suggest interaction
-        with systems beyond known physical boundaries.
-      </p>
+      <div class="file-card" data-name="project atlas">
+        <h3>PROJECT ATLAS</h3>
+        <p>Orbital mapping inconsistencies across surveyed planetary grid.</p>
+      </div>
 
-      <h2>SECTION 01 — PROJECT ATLAS</h2>
-      <p>
-        Orbital mapping systems have recorded inconsistencies in planetary positioning data.
-        Some regions appear to “shift” outside expected gravitational modeling.
-      </p>
+      <div class="file-card" data-name="entity records unknown life">
+        <h3>ENTITY RECORDS</h3>
+        <p>Non-terrestrial biological signatures detected in restricted zones.</p>
+      </div>
 
-      <h2>SECTION 02 — ENTITY RECORDS</h2>
-      <p>
-        Biological signatures detected in multiple zones do not match known terrestrial lifeforms.
-        Several samples show structural adaptation beyond evolutionary constraints.
-      </p>
+      <div class="file-card" data-name="solar grid expansion energy">
+        <h3>SOLAR GRID EXPANSION</h3>
+        <p>Planetary-scale energy harvesting infrastructure under development.</p>
+      </div>
 
-      <h2>SECTION 03 — SOLAR GRID EXPANSION</h2>
-      <p>
-        Energy harvesting initiatives have escalated toward full planetary capture systems.
-        Current projections indicate feasibility of star-level energy integration.
-      </p>
+      <div class="file-card" data-name="containment logs breach">
+        <h3>CONTAINMENT LOGS</h3>
+        <p>Multiple containment failures recorded across sealed research sectors.</p>
+      </div>
 
-      <h2>SECTION 04 — CONTAINMENT LOGS</h2>
-      <p>
-        Multiple containment failures recorded across secured research zones.
-        Subject behavior suggests partial awareness of observation protocols.
-      </p>
-
-      <h2>SECTION 05 — UNKNOWN SIGNAL</h2>
-      <p>
-        A repeating transmission has been identified originating outside mapped space.
-        Pattern analysis indicates structured communication attempts.
-      </p>
-
-      <hr>
-
-      <p class="footer-note">
-        END OF DOSSIER — PROJECT SAWBOO ACCESS TERMINATED
-      </p>
+      <div class="file-card" data-name="unknown signal transmission">
+        <h3>UNKNOWN SIGNAL</h3>
+        <p>Deep space transmission detected. Pattern suggests structured communication.</p>
+      </div>
 
     </div>
 
   </main>
+
+  <!-- SEARCH SCRIPT -->
+  <script>
+    function searchFiles() {
+      const input = document.getElementById("searchBar").value.toLowerCase();
+      const files = document.querySelectorAll(".file-card");
+
+      files.forEach(file => {
+        const name = file.getAttribute("data-name").toLowerCase();
+        const text = file.innerText.toLowerCase();
+
+        if (name.includes(input) || text.includes(input)) {
+          file.style.display = "block";
+        } else {
+          file.style.display = "none";
+        }
+      });
+    }
+  </script>
 
 </body>
 </html>
