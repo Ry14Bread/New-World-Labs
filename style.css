@@ -1,0 +1,10 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    padding: 40px;
+}
+
+h1 {
+    color: cyan;
+}
