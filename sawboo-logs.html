@@ -2,92 +2,316 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>S.A.W.B.O.O // LOG ARCHIVE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S.A.W.B.O.O // RECOVERED ARCHIVE</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    body{
+      margin:0;
+      background:#05070a;
+      color:#d6d6d6;
+      font-family:Consolas, monospace;
+    }
+
+    .topbar{
+      background:#0a0f16;
+      border-bottom:1px solid #18324d;
+      padding:20px;
+      text-align:center;
+      box-shadow:0 0 20px rgba(0,0,0,.7);
+    }
+
+    .topbar h2{
+      margin:0;
+      color:#4aa3ff;
+      letter-spacing:3px;
+      text-shadow:0 0 8px rgba(74,163,255,.4);
+    }
+
+    .container{
+      max-width:900px;
+      margin:auto;
+      padding:40px 20px;
+    }
+
+    .warning{
+      text-align:center;
+      border:1px solid #4aa3ff33;
+      background:#08111b;
+      padding:20px;
+      margin-bottom:40px;
+      box-shadow:0 0 20px rgba(0,0,0,.6);
+    }
+
+    .warning h3{
+      color:#4aa3ff;
+      margin-top:0;
+      letter-spacing:2px;
+    }
+
+    .warning p{
+      color:#9aa7b5;
+      line-height:1.6;
+    }
+
+    .log{
+      background:#0a0d12;
+      border-left:4px solid #4aa3ff;
+      padding:25px;
+      margin-bottom:30px;
+      box-shadow:0 0 15px rgba(0,0,0,.5);
+      position:relative;
+    }
+
+    .log::before{
+      content:"RECOVERED FILE";
+      position:absolute;
+      top:10px;
+      right:15px;
+      font-size:11px;
+      color:#3d5168;
+      letter-spacing:2px;
+    }
+
+    .log h2{
+      margin-top:0;
+      color:#4aa3ff;
+      letter-spacing:2px;
+    }
+
+    .log-info{
+      color:#73879c;
+      font-size:14px;
+      margin-bottom:20px;
+      line-height:1.7;
+    }
+
+    .log p{
+      line-height:1.8;
+      color:#cfcfcf;
+    }
+
+    .redacted{
+      background:#000;
+      color:#000;
+      padding:2px 6px;
+      border-radius:2px;
+    }
+
+    .danger{
+      color:#ff4d4d;
+      font-weight:bold;
+    }
+
+    .glitch{
+      animation:glitch 1s infinite;
+    }
+
+    @keyframes glitch{
+      0%{opacity:1;}
+      50%{opacity:.6;}
+      100%{opacity:1;}
+    }
+
+    .footer{
+      text-align:center;
+      margin-top:50px;
+      color:#666;
+      font-size:13px;
+      letter-spacing:2px;
+    }
+
+  </style>
 </head>
 
-<body class="dark">
+<body>
 
 <header class="topbar">
-  <h2>S.A.W.B.O.O // CLASSIFIED LOG ARCHIVE</h2>
+  <h2>S.A.W.B.O.O // RECOVERED ARCHIVE</h2>
 </header>
 
 <main class="container">
 
-  <h3 style="text-align:center; color:#4aa3ff; margin-top:20px;">
-    WARNING: INFORMATION REDACTED
-  </h3>
+  <div class="warning">
 
-  <p style="text-align:center; color:#aaa;">
-    Much of the non-essential or private information has been removed.
-  </p>
+    <h3>WARNING // INFORMATION REDACTED</h3>
 
-  <div class="research-doc">
+    <p>
+      Unauthorized access to S.A.W.B.O.O research materials is punishable under
+      Federal Secrecy Act 11-C.
+      <br><br>
+      Much of the non-essential or private information has been removed.
+      Certain logs remain corrupted following the
+      <span class="danger">Sublevel C Incident.</span>
+    </p>
+
+  </div>
+
+
+  <div class="log">
 
     <h2>LOG / 001</h2>
+
+    <div class="log-info">
+      PRINCIPAL INVESTIGATOR: Dr. Elias Varn<br>
+      CLEARANCE LEVEL: 4<br>
+      STATUS: RECOVERED
+    </div>
+
     <p>
-      Principal Investigator [Redacted] has found more information on [Redacted] hospital logs regarding patient J.B.
-      Research into the Somniportascire pathway has revealed a major breakthrough: the
-      <b>Creatus-Somniportascire Foreman Lobe</b>.
+      We finally obtained the hospital records connected to patient J.B.
+      Most of the files were buried beneath sealed psychiatric reports and missing-person documentation.
+      Someone clearly tried to erase him.
+      <br><br>
+      The scans confirm abnormal neurological growth surrounding the
+      <b>Creatus-Somniportascire Foreman Lobe.</b>
+      <br><br>
+      The strange part is the tissue doesn't resemble normal brain matter anymore.
+      It almost looks...
+      grown.
     </p>
 
-    <hr>
+  </div>
+
+
+  <div class="log">
 
     <h2>LOG / 002</h2>
+
+    <div class="log-info">
+      TIMESTAMP: 01:14 AM<br>
+      RECORDING STATUS: TRANSCRIBED
+    </div>
+
     <p>
-      Following funding approval, researchers scanned volunteers for neural anomalies.
-      Only one in 1.5 million subjects can form physical pathways.
-      Subject [Unavailable] demonstrated successful formation of the Foreman Lobe.
-      Plans were made to initiate medically induced coma testing.
+      We screened over 600,000 volunteers.
+      None developed stable pathways.
+      Then J.B. entered the program.
+      <br><br>
+      The moment the scans finished, every monitor in Lab 3 shut down simultaneously.
+      Backup systems rebooted after twelve seconds.
+      <br><br>
+      J.B. never reacted.
+      He just sat there staring at the observation glass.
+      <br><br>
+      I don't think he was looking at us.
     </p>
 
-    <hr>
+  </div>
+
+
+  <div class="log">
 
     <h2>LOG / 004</h2>
+
+    <div class="log-info">
+      COMA OBSERVATION PHASE<br>
+      STATUS: ACTIVE
+    </div>
+
     <p>
-      Subject entered coma state. Monitoring initiated. Data collection phase active.
-      Expectations for breakthrough results confirmed by Principal Investigator.
+      Subject entered medically induced coma at 02:03 AM.
+      Brain activity exceeded projected limits within minutes.
+      <br><br>
+      We expected dreams.
+      We expected hallucinations.
+      <br><br>
+      What we did not expect...
+      was the voice.
+      <br><br>
+      Audio equipment throughout the chamber recorded whispering despite the room being sealed.
+      Multiple staff reported hearing their names spoken from empty hallways.
     </p>
 
-    <hr>
+  </div>
+
+
+  <div class="log">
 
     <h2>LOG / 011</h2>
+
+    <div class="log-info">
+      SECURITY NOTICE<br>
+      PRIORITY: HIGH
+    </div>
+
     <p>
-      Funding has been revoked. Data stream from monitoring equipment was interrupted.
-      Subject remains alive under observation. Security personnel engaged.
+      Funding has been revoked following the Sublevel C blackout.
+      External oversight teams arrived this morning.
+      <br><br>
+      J.B. remains alive despite catastrophic neural expansion.
+      The walls inside the chamber are covered in markings we cannot identify.
+      <br><br>
+      Nobody admits to writing them.
+      <br><br>
+      The symbols continue appearing overnight.
     </p>
 
-    <hr>
+  </div>
+
+
+  <div class="log glitch">
 
     <h2>LOG / 012</h2>
+
+    <div class="log-info">
+      FILE CORRUPTED<br>
+      PARTIAL RECOVERY ONLY
+    </div>
+
     <p>
-      Clearance level increased unexpectedly. Publication blocked.
-      Research suggests potential applications in neurological reconstruction.
-      Unknown entity reported inside facility prior to system failure.
+      I reviewed the hallway footage again.
+      J.B. never leaves the containment room.
+      <br><br>
+      So explain why security cameras caught him walking through Sublevel C at 01:03.
+      <br><br>
+      The chamber door never opened.
+      <br><br>
+      At 01:04 he was back inside the room,
+      standing motionless in the corner.
+      <br><br>
+      Looking directly into the camera.
+      <br><br>
+      Smiling.
     </p>
 
-    <hr>
+  </div>
 
-    <h2>LOG / 013</h2>
-    <p>
-      Subject did not recover. Severe neurological expansion observed prior to termination.
-      Unknown hostile entity entered facility. Multiple personnel lost.
-      Security response initiated.
-    </p>
 
-    <hr>
+  <div class="log">
 
     <h2>REPORT P-001</h2>
+
+    <div class="log-info">
+      INCIDENT REPORT<br>
+      STATUS: CLASSIFIED
+    </div>
+
     <p>
-      Incident A-SAWBOO-0Jw3 contained. Multiple personnel confirmed deceased or missing.
-      Principal Investigator and Security Captain detained.
-      Biological Analyst [Unavailable] presumed missing with no recoverable remains.
+      Incident A-SAWBOO-0Jw3 contained.
+      Multiple personnel confirmed deceased or missing.
+      <br><br>
+      Principal Investigator detained pending federal review.
+      Biological Analyst <span class="redacted">████████</span>
+      remains unaccounted for.
+      <br><br>
+      Remaining surveillance footage ends abruptly at 03:11 AM.
+      <br><br>
+      Final recovered audio contains unidentified breathing and repeated knocking from inside sealed containment.
     </p>
 
-    <p style="color:#ff3b3b; font-weight:bold;">
+    <p class="danger">
       END OF ARCHIVE FILE
     </p>
 
+  </div>
+
+
+  <div class="footer">
+    S.A.W.B.O.O INTERNAL DATABASE // EYES ONLY
   </div>
 
 </main>
