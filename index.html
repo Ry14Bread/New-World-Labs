@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>New World Labs</title>
-    <link rel="stylesheet" href="style.css">
+  <title>New World Labs</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-<div style="text-align:center; font-family:Arial; background:black; color:red; height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+<body id="body">
+
+<div id="warningScreen" style="text-align:center; font-family:Arial; background:black; color:red; height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;">
 
   <h1>⚠ CLASSIFIED ACCESS NOTICE ⚠</h1>
 
   <p>This system contains restricted research belonging to New World Labs.</p>
 
-  <p>Unauthorized access is prohibited under our research protection agreement A-03-1</p>
+  <p>Unauthorized access is prohibited under research protection agreement A-03-1</p>
 
   <p>Proceeding without clearance will result in assignment as a provisional field analyst.</p>
 
@@ -20,16 +21,43 @@
 
   <br>
 
-  <button onclick="enterSite()" style="padding:10px 20px; font-size:16px;">
+  <button id="enterBtn" onclick="enterSite()" style="padding:10px 20px; font-size:16px;">
     Continue with Clearance
   </button>
+
+  <div id="accessGranted" style="display:none; margin-top:20px; font-size:18px; color:#4aa3ff;">
+    ACCESS GRANTED
+  </div>
 
 </div>
 
 <script>
 function enterSite() {
-  window.location.href = "home.html";
+  const btn = document.getElementById("enterBtn");
+  const text = document.getElementById("accessGranted");
+  const screen = document.getElementById("warningScreen");
+
+  // disable button + update text
+  btn.disabled = true;
+  btn.innerText = "Verifying Clearance...";
+
+  // show ACCESS GRANTED
+  setTimeout(() => {
+    text.style.display = "block";
+  }, 600);
+
+  // fade out screen
+  setTimeout(() => {
+    screen.style.transition = "opacity 0.6s ease";
+    screen.style.opacity = "0";
+  }, 1200);
+
+  // redirect to main site
+  setTimeout(() => {
+    window.location.href = "home.html";
+  }, 1800);
 }
 </script>
+
 </body>
 </html>
