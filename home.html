@@ -5,15 +5,6 @@
 
   <style>
     body {
-      <div style="padding:20px;">
-  <input 
-    id="searchBar"
-    type="text"
-    placeholder="Search classified archives..."
-    onkeyup="searchFiles()"
-    style="width:100%; padding:10px; font-size:16px; background:#111; color:#00ffcc; border:1px solid #00ffcc;"
-  />
-</div>
       background-color: #0a0a0a;
       color: #00ffcc;
       font-family: monospace;
@@ -45,57 +36,67 @@
       color: red;
       font-size: 12px;
     }
+
+    #searchBar {
+      width: calc(100% - 40px);
+      margin: 20px;
+      padding: 10px;
+      font-size: 16px;
+      background: #111;
+      color: #00ffcc;
+      border: 1px solid #00ffcc;
+      font-family: monospace;
+    }
   </style>
 </head>
-<script>
-function searchFiles() {
-  let input = document.getElementById("searchBar").value.toLowerCase();
-  let folders = document.getElementsByClassName("folder");
 
-  for (let i = 0; i < folders.length; i++) {
-    let text = folders[i].innerText.toLowerCase();
-
-    if (text.includes(input)) {
-      folders[i].style.display = "block";
-    } else {
-      folders[i].style.display = "none";
-    }
-  }
-}
-</script>
 <body>
 
+  <!-- HEADER -->
   <div class="header">
     <h1>NEW WORLD LABS</h1>
     <p>Central Archive Node // Domus 001</p>
     <p class="warning">UNAUTHORIZED ACCESS IS LOGGED</p>
   </div>
 
+  <!-- SEARCH BAR -->
+  <input 
+    id="searchBar"
+    type="text"
+    placeholder="Search classified archives..."
+    onkeyup="searchFiles()"
+  />
+
+  <!-- CONTENT -->
   <div class="container">
 
     <h2>Research Index</h2>
 
-    <div class="folder">
-      Project S.A.W.B.O.O — Core Documentation
-    </div>
-
-    <div class="folder">
-      Vivid Ring Physics // Domus Structure Analysis
-    </div>
-
-    <div class="folder">
-      C.P.N Neural Interface Reports
-    </div>
-
-    <div class="folder">
-      Restricted Personnel Files [REDACTED]
-    </div>
-
-    <div class="folder">
-      Creatus-Somniportascire Case Studies
-    </div>
+    <div class="folder">Project S.A.W.B.O.O — Core Documentation</div>
+    <div class="folder">Vivid Ring Physics // Domus Structure Analysis</div>
+    <div class="folder">C.P.N Neural Interface Reports</div>
+    <div class="folder">Restricted Personnel Files [REDACTED]</div>
+    <div class="folder">Creatus-Somniportascire Case Studies</div>
 
   </div>
+
+  <!-- SCRIPT -->
+  <script>
+    function searchFiles() {
+      let input = document.getElementById("searchBar").value.toLowerCase();
+      let folders = document.getElementsByClassName("folder");
+
+      for (let i = 0; i < folders.length; i++) {
+        let text = folders[i].innerText.toLowerCase();
+
+        if (text.includes(input)) {
+          folders[i].style.display = "block";
+        } else {
+          folders[i].style.display = "none";
+        }
+      }
+    }
+  </script>
 
 </body>
 </html>
