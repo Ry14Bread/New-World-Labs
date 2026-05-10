@@ -117,7 +117,7 @@ body {
   background-color: black;
   border: none;
 
-  opacity: 0.25;
+  opacity: 0.4;
 
   cursor: pointer;
 }
@@ -127,7 +127,7 @@ body {
 
   color: red;
 
-  border: 1px solid red;
+  border: 1px solid grey;
 
   padding: 15px;
 
